@@ -10,7 +10,7 @@ class Application
 
 
     if req.path.match(/items/)
-      if !@@items.include?("/items/")
+      if @@items.include?("/items/")
         resp.write "Item not found"
         resp.status = 400
       else

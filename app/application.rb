@@ -11,8 +11,11 @@ class Application
 
     if req.path.match(/items/)
       if !@@items.include?("/items/")
-      item_price = @@items.each {|item| item.price.to_s}
-      resp.write item_price
+        resp.write "Route not found"
+        resp.status = 404
+      else
+        item_price = @@items.each {|item| item.price.to_s}
+        resp.write item_price
     elsif
 
     end

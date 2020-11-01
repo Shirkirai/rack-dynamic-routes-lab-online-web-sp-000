@@ -9,7 +9,9 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      
+      @@items.each do |item|
+        item.price.to_s
+      end
 
     end
     resp.finish

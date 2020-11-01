@@ -11,7 +11,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      item = @@items.each{|item| item == item_name}
+      item = @@items.find{|item| item == item_name}
     else
       resp.write "Item not found"
       resp.status = 400

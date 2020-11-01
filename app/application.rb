@@ -16,7 +16,13 @@ class Application
       elsif
         item_price = @@items.each {|item| item.price.to_s}
         resp.write item_price
-    elsif
+      end
+    else
+      resp.write "Route not found"
+      res.status = 404
+    end
+
+
 
     end
     resp.finish

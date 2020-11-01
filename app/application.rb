@@ -16,7 +16,6 @@ class Application
       else
         item_price = @@items.each {|item| item.price.to_s}
         resp.write item_price
-        binding.pry
         resp.status = 200
       end
     else

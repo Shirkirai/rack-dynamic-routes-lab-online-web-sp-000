@@ -11,7 +11,7 @@ class Application
 
     if req.path.match(/items/)
       if @@items.include?("/items/")
-        return @@items.each{|item| item_price = item.price.to_s}
+        rep.write @@items.each{|item| item_price = item.price.to_s}
       else
         resp.write "Item not found"
         resp.status = 400

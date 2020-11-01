@@ -8,8 +8,9 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
+    binding.pry
     def item_price(item)
-      binding.pry
+      
       if @@items.include?(item)
         @@items.each{|item| item_price = item.price.to_s}
       end

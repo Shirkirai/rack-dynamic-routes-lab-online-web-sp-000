@@ -10,7 +10,7 @@ class Application
 
 
     if req.path.match(/items/)
-      if @@items.include?("/items/")
+      @@items.include?("/items/")
         @@items.each do |item|
           resp.write "#{item.price}"
         end

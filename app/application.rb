@@ -13,6 +13,7 @@ class Application
       if @@items.include?("/items/")
         @@items.each do |item|
           resp.write "#{item.price}"
+        end
       else
         resp.write "Item not found"
         resp.status = 400

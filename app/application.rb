@@ -14,6 +14,7 @@ class Application
         resp.write "Item not found"
         resp.status = 400
       else
+        binding.pry
         resp.write @@items.each{|item| item_price = item.price.to_s}
         resp.status = 200
       end

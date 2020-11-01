@@ -11,7 +11,7 @@ class Application
     if req.path.match(/items/)
       item_price = @@items.each {|item| item.price.to_s}
       end
-      resp.write
+      resp.write item_price
 
     end
     resp.finish

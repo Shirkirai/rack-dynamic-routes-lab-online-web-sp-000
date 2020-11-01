@@ -9,7 +9,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-
+      binding.pry
       item_price = req.path.split("/items/").last.price.to_s
       @@items.each do |item|
         #binding.pry

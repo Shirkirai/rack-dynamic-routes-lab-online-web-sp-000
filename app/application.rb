@@ -16,6 +16,9 @@ class Application
       elsif @@items.include?("/items/")
         item_price = @@items.each {|item| item.price.to_s}
         resp.write item_price
+      else
+        resp.write "Route not found"
+        resp.status = 404
       end
     else
       resp.write "Route not found"

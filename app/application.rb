@@ -10,7 +10,7 @@ class Application
 
     binding.pry
     def item_price(item)
-      
+
       if @@items.include?(item)
         @@items.each{|item| item_price = item.price.to_s}
       end

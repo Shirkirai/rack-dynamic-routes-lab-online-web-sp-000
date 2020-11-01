@@ -8,7 +8,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    binding.pry
+
     if req.path.match(/items/)
       if !@@items.include?("/items/")
         resp.write "Item not found"

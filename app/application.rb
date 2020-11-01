@@ -12,7 +12,7 @@ class Application
       if @@items.include?(item)
         @@items.each{|item| item_price = item.price.to_s}
       end
-      binding.pry
+      
     end
 
 

@@ -10,6 +10,7 @@ class Application
 
 
     if req.path.match(/items/)
+      if !@@items.include?("item")
       item_price = @@items.each {|item| item.price.to_s}
       resp.write item_price
     elsif

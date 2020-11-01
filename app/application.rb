@@ -24,6 +24,4 @@ class Application
     end
     resp.finish
   end
-
-  def item_price
 end

@@ -12,7 +12,6 @@ class Application
     if req.path.match(/items/)
       if @@items.include?("/items/")
         return @@items.each{|item| item_price = item.price.to_s}
-        resp.status = 200
       else
         resp.write "Item not found"
         resp.status = 400

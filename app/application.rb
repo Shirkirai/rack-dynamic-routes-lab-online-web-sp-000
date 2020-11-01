@@ -10,11 +10,8 @@ class Application
 
 
     if req.path.match(/items/)
-      @@items.include?("/items/")
-        @@items.each do |item|
-          resp.write "#{item.price}"
-        end
-      else
+      item_name = req.path.split("/items/")
+    else
         resp.write "Item not found"
         resp.status = 400
       end

@@ -13,7 +13,7 @@ class Application
       if !@@items.include?("/items/")
         resp.write "Item not found"
         resp.status = 400
-      elsif @@items.include?("/items/")
+      else @@items.include?("/items/")
         item_price = @@items.each {|item| item.price.to_s}
         resp.write item_price
       end

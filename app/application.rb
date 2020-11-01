@@ -9,15 +9,6 @@ class Application
     req = Rack::Request.new(env)
 
     binding.pry
-    def item_price(item)
-
-      if @@items.include?(item)
-        @@items.each{|item| item_price = item.price.to_s}
-      end
-
-    end
-
-
     if req.path.match(/items/)
       if !@@items.include?("/items/")
         resp.write "Item not found"

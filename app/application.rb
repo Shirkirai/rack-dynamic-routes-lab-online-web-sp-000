@@ -8,9 +8,11 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
+
     if req.path.match(/items/)
       item_price = @@items.each {|item| item.price.to_s}
       resp.write item_price
+    elsif
 
     end
     resp.finish

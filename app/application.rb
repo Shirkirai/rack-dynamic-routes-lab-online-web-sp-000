@@ -13,9 +13,6 @@ class Application
 
       item_price = req.path.split("/items/").last.price.to_s
       binding.pry
-      @@items.each do |item|
-        #binding.pry
-        resp.write item.price.to_s
       end
     end
 

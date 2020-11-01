@@ -13,7 +13,6 @@ class Application
 
       item_price = req.path.split("/items/").last.price.to_s
       binding.pry
-      end
     end
 
 

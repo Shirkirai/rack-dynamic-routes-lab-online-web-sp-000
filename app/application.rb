@@ -12,7 +12,7 @@ class Application
     if req.path.match(/items/)
       if @@items.include?("/items/")
         @@items.each do |item|
-          resp.write 
+          resp.write "#{item.price}"
         rep.write @@items.each{|item| item_price = item.price.to_s}
       else
         resp.write "Item not found"

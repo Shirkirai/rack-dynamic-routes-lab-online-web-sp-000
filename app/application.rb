@@ -11,6 +11,7 @@ class Application
     if req.path.match(/items/)
 
       item_price = req.path.split("/items/").last.price.to_s
+      resp.write item_price
       binding.pry
     end
 

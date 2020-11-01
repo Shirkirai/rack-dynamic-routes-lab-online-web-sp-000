@@ -9,8 +9,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      item_price = @@items.each do |item|
-        item.price.to_s
+      item_price = @@items.each {|item| item.price.to_s}
       end
       resp.write
 

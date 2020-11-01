@@ -11,6 +11,11 @@ class Application
       item_price = req.path.split("/item/").last
       item = @@item.find{|i| i.price == item_price}
 
+      resp.write item.price
+    end
+
+    resp.finish
+
 
 
 

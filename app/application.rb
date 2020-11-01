@@ -11,7 +11,6 @@ class Application
 
     if req.path.match(/items/)
       if @@items.include?("/items/")
-        binding.pry
         return @@items.each{|item| item_price = item.price.to_s}
       else
         resp.write "Item not found"
